@@ -1,24 +1,21 @@
-# Quizzler
-Learn to make iOS Apps with [The App Brewery](https://www.appbrewery.co) 📱 | Project Stub | (Swift 4.0/Xcode 9) - Quizzler App
+//
+//  QuestionBank.swift
+//  Quizzler
+//
+//  Created by Gabriel Perez on 4/13/18.
+//  Copyright © 2018 London App Brewery. All rights reserved.
+//
 
-Beginner: Download the starter project files as .zip and extract the files to your desktop.
+import Foundation
 
-Pro: Git clone to your Xcode projects folder.
-
-## Finished App
-![Finished App](https://github.com/londonappbrewery/Images/blob/master/Quizzler.gif)
-
-
-
-## Quiz Text Strings
-
-        // Creating a quiz item and appending it to the list
-        let item = Question(text: "Valentine\'s day is banned in Saudi Arabia.", correctAnswer: true)
+class QuestionBank {
+    
+    var list = [Question]()
+    
+    init() {
+    
+        list.append(Question(text: "Valentine\'s day is banned in Saudi Arabia.", correctAnswer: true))
         
-        // Add the Question to the list of questions
-        list.append(item)
-        
-        // skipping one step and just creating the quiz item inside the append function
         list.append(Question(text: "A slug\'s blood is green.", correctAnswer: true))
         
         list.append(Question(text: "Approximately one quarter of human bones are in the feet.", correctAnswer: true))
@@ -42,7 +39,5 @@ Pro: Git clone to your Xcode projects folder.
         list.append(Question(text: "No piece of square dry paper can be folded in half more than 7 times.", correctAnswer: false))
         
         list.append(Question(text: "Chocolate affects a dog\'s heart and nervous system; a few ounces are enough to kill a small dog.", correctAnswer: true))
-        
-        
-
-Copyright © The App Brewery
+    }
+}
